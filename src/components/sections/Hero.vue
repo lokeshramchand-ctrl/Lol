@@ -69,7 +69,7 @@
             <img
               id="profile-img"
               :src="profile"
-              alt="Ebraheem profile"
+              alt="Lokesh profile"
               class="size-full scale-90 rounded-lg object-cover object-top brightness-110 grayscale"
             />
           </div>
@@ -110,7 +110,7 @@
   // import { dataCalConfig, dataCalLink, dataCalNamespace } from '@/data';
 
   const whoAmI = ref(
-    'A freelance full-stack developer, cutting-edge technologies to deliver comprehensive solutions for your business.',
+    'A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions for complex challenges.',
   );
   const AvailableForWorkDate = ref('');
 

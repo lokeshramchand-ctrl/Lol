@@ -54,8 +54,8 @@
           <Link
             class="font-medium tracking-wider"
             tag="p"
-            label="hetari4all@gmail.com"
-            url="mailto:hetari4all@gmail.com"
+            label="lokeshramchand@gmail.com"
+            url="mailto:lokeshramchand@gmail.com"
           />
           <div class="mt-6 flex flex-wrap justify-start gap-1">
             <Button

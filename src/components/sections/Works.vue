@@ -26,8 +26,7 @@
         <p
           class="heading-4 font-fancy col-span-8 w-full text-balance sm:font-semibold lg:col-span-7"
         >
-          Featured client projects that have been meticulously crafted with
-          passion and purpose over the years.
+          Featured engineering projects meticulously crafted, from intelligent spatial RAG platforms to event-driven LLM architectures.
         </p>
       </div>
     </div>
@@ -143,50 +142,49 @@
 
   const selectedWorksProps = [
     {
-      name: 'Madar',
-      category: 'Frontend',
-      tags: ['Vue.js', 'Tailwind', 'Gsap'],
-      videoSrc: work5,
-      imageBg: workBg5,
-      url: 'https://madar.services/',
-      year: '2025',
-    },
-    {
-      name: 'Iphone 15 Clone',
-      category: 'Frontend & Animation & 3D',
-      tags: ['Animation', '3D'],
-      videoSrc: work2,
-      imageBg: workBg2,
-      url: 'https://github.com/Hetari/iphone15-pro-clone',
-      year: '2024',
-    },
-    {
-      name: 'Axon',
-      category: 'Frontend & Documentation',
-      tags: ['Vue.js', 'Tailwind', 'AI'],
-      videoSrc: work3,
-      imageBg: workBg3,
-      url: 'https://github.com/Hetari/axon',
-
-      year: '2024',
-    },
-    {
-      name: 'Blogy',
-      category: 'Frontend & Backend',
-      tags: ['Vue.js', 'Laravel'],
-      videoSrc: work4,
-      imageBg: workBg4,
-      url: 'https://github.com/Hetari/blog',
-      year: '2023',
-    },
-    {
-      name: 'Pyutube',
-      category: 'CLI Tool & Cross Platform',
-      tags: ['Python', 'CLI', 'Youtube'],
+      name: 'Velar',
+      category: 'AI Finance System',
+      tags: ['Node.js', 'Python', 'RabbitMQ'],
       videoSrc: work1,
       imageBg: workBg1,
-      url: 'https://github.com/hetari/pyutube',
+      url: 'https://github.com/lokeshramchand-ctrl',
       year: '2024',
+    },
+    {
+      name: 'MapLayer',
+      category: 'GeoRAG Platform',
+      tags: ['React', 'TypeScript', 'AI'],
+      videoSrc: work2,
+      imageBg: workBg2,
+      url: 'https://github.com/lokeshramchand-ctrl',
+      year: '2024',
+    },
+    {
+      name: 'SPL Systems',
+      category: 'Infrastructure & AI Portal',
+      tags: ['Linux', 'Ollama', 'WebUI'],
+      videoSrc: work3,
+      imageBg: workBg3,
+      url: 'https://splsystems.in',
+      year: '2024',
+    },
+    {
+      name: 'Water Watchers',
+      category: 'Frontend Engineering',
+      tags: ['UI/UX', 'Performance', 'CMS'],
+      videoSrc: work4,
+      imageBg: workBg4,
+      url: '#',
+      year: '2024',
+    },
+    {
+      name: 'Enterprise Twin',
+      category: 'Event-Driven Architecture',
+      tags: ['MLOps', 'RAG', 'Node.js'],
+      videoSrc: work5,
+      imageBg: workBg5,
+      url: '#',
+      year: '2026',
     },
   ];
 

@@ -38,19 +38,15 @@ const navbarLinks = [
 const socialLinks = [
   {
     label: 'X',
-    url: 'https://x.com/hetaridev',
-  },
-  {
-    label: 'Telegram',
-    url: 'https://t.me/e_1_e',
+    url: 'https://x.com/lokeshramchand',
   },
   {
     label: 'GitHub',
-    url: 'https://github.com/hetari',
+    url: 'https://github.com/lokeshramchand-ctrl',
   },
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/hetaridev/',
+    url: 'https://www.linkedin.com/in/lokeshramchand/',
   },
 ];
 
@@ -69,7 +65,7 @@ const heroText =
   'A freelance full-stack developer, making good shit since 2023, hiding bad shit since 2023.';
 
 const locationPlace = `15°22'22.0"N 44°10'39.5"E`;
-const locationCountry = 'Yemen, Sanaa';
+const locationCountry = 'Hyderabad,India';
 
 // cal.com
 const dataCalNamespace = '30min';

@@ -28,13 +28,20 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  server: {
-    // watch: {
-    //   usePolling: true,
-    //   interval: 1000,
-    //   ignored: ['!**/src/**/*.{js,ts,jsx,tsx}'],
-    // },
+server: {
+  host: true,          // ensures external access works
+  port: 5173,          // keep consistent with your dev server
+  hmr: {
+    protocol: 'ws',    // use WebSocket
+    host: 'localhost', // force HMR to connect locally
+    port: 5173
   },
+  watch: {
+    usePolling: true,  // helps on Windows/WSL/MINGW
+    interval: 1000     // adjust if needed
+  }
+},
+
   optimizeDeps: {
     exclude: ['@tailwindcss/vite'],
     force: true,

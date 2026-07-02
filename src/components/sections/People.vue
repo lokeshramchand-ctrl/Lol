@@ -20,9 +20,7 @@
           ( Testimonials )
         </p>
         <p class="heading-6 font-fancy w-full text-balance sm:max-w-[40ch]">
-          Here's what my clients say about our collaboration. Their satisfaction
-          and meeting expectations are my top priorities, ensuring the best
-          experience possible.
+          Here is what my managers and technical leads have to say about our work together. Delivering high-quality results, integrating smoothly with the team, and exceeding project expectations are my top priorities.
         </p>
       </div>
     </div>

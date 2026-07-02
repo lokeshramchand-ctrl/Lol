@@ -261,19 +261,14 @@
   const people = [
     {
       quote:
-        'Collaborating with Hetari on multiple projects has been a true pleasure. His exceptional skills, attention to detail, and commitment to quality consistently made him an invaluable asset to the team.',
-      author: 'Mohammad AL-Sulami',
-      position: 'Full Stack Developer',
-      tags: ['Web Development', 'Animation', 'UI/UX'],
+        'Lokesh was competent, open to direction, and gave expert advice throughout the redesign process. His positive attitude and humility make him a true joy to collaborate with. ',
+      author: 'Danielle Lindamood',
+      position: 'Director at Wellington Water Watchers',
+     
       profile: mohammad,
     },
     {
-      quote:
-        'Working with Ebraheem on the Axon website has been an exceptional experience. His invaluable support and dedication were crucial in bringing this project to life. Thank you, Ebraheem!',
-      author: 'Esmail Atta',
-      position: 'Founder of Axon',
-      tags: ['Web Development', 'SEO'],
-      profile: esmail,
+
     },
   ];
 </script>
