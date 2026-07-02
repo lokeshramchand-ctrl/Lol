@@ -37,16 +37,14 @@
         <img
           :src="profile2"
           class="aspect-[1/1.5] rounded-lg object-cover object-top mix-blend-screen brightness-90 grayscale"
-          alt="Headshot of Ebraheem facing a camera"
+          alt="Headshot of Lokesh Ram Chand B facing a camera"
         />
       </div>
       <div class="col-span-11 mt-10 md:col-span-8 md:col-start-6">
         <p
           class="heading-4 relative w-full max-w-[40ch] leading-snug font-medium text-balance"
         >
-          With a passion for design and development, I take projects from
-          ideation to launch, ensuring a seamless journey that leaves a lasting
-          positive impact on the digital landscape and your business.
+          With a passion for full-stack development and AI integration, I engineer robust platforms from the ground up. I focus on building scalable, event-driven architectures that deliver intelligent solutions and drive measurable impact.
         </p>
 
         <div
@@ -56,12 +54,8 @@
             ( ABOUT ME )
           </p>
           <p class="heading-6 font-fancy w-full text-balance sm:max-w-[40ch]">
-            Creating great web experiences is my primary focus. I ensure each
-            project leaves users with a feel-good sensation through meticulous
-            attention to detail and user-centric design principles. <br /><br />
-            When I'm not immersed in web development and design, you can find me
-            sharing insights about my freelance journey on <i>&Xopf;</i>,
-            loudly, playing music (Funk), or just relaxing.
+            Architecting high-performance web applications and machine learning pipelines is my primary focus. I leverage technologies like React, Node.js, and self-hosted LLMs to bridge the gap between complex geospatial data and seamless frontend experiences. <br /><br />
+            When I am not immersed in deploying production-ready AI models or optimizing databases, I enjoy exploring advanced Retrieval-Augmented Generation (RAG) systems and refining my full-stack engineering toolkit.
           </p>
         </div>
       </div>
@@ -88,7 +82,7 @@
 
   onBeforeMount(() => {
     aboutMe.value = textSplitterIntoChar(
-      'Programmer, Developer, Web-animator/',
+      'Software Engineer, Full-Stack, AI/',
       true,
       true,
     );

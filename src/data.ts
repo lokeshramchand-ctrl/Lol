@@ -38,38 +38,38 @@ const navbarLinks = [
 const socialLinks = [
   {
     label: 'X',
-    url: 'https://x.com/lokeshramchand',
+    url: 'https://x.com/lokeshramchand', 
   },
   {
     label: 'GitHub',
-    url: 'https://github.com/lokeshramchand-ctrl',
+    url: 'https://github.com/lokeshramchand-ctrl', 
   },
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/lokeshramchand/',
+    url: 'https://www.linkedin.com/in/lokeshramchand/', 
   },
 ];
 
 const resourceLinks = [
   {
-    label: 'Pillarstack',
-    url: 'https://www.pillarstack.com',
+    label: 'Resume',
+    url: '/LokeshRamChand_Resume.pdf',
   },
   {
-    label: 'Figma Template',
-    url: 'https://www.figma.com/community/file/1328038510191576951/project-starter-template',
+    label: 'GitHub',
+    url: 'https://github.com/lokeshramchand-ctrl',
   },
 ];
 
 const heroText =
-  'A freelance full-stack developer, making good shit since 2023, hiding bad shit since 2023.';
+  'A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions.';
 
-const locationPlace = `15°22'22.0"N 44°10'39.5"E`;
-const locationCountry = 'Hyderabad,India';
+const locationPlace = `17°22'31.0"N 78°28'27.0"E`; 
+const locationCountry = 'Hyderabad, India'; 
 
 // cal.com
 const dataCalNamespace = '30min';
-const dataCalLink = 'brhoom/30min';
+const dataCalLink = 'lokeshramchand/30min'; 
 const dataCalConfig =
   '{"layout":"month_view", "theme": "dark", "brand": "#8C8C73"}';
 

@@ -38,8 +38,7 @@
             </div>
 
             <p class="sr-only">
-              A freelance full-stack developer, cutting-edge technologies to
-              deliver comprehensive solutions for your business.
+              A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions for complex challenges.
             </p>
             <p
               v-html="whoAmI"
@@ -56,7 +55,7 @@
                   class="contact"
                   label="Get in touch"
                 /> -->
-                <Button label="Get in touch" url="https://wa.me/967775367671" />
+                <Button label="Get in touch" url="https://wa.me/919121661507" />
               </div>
             </div>
           </div>
@@ -69,7 +68,7 @@
             <img
               id="profile-img"
               :src="profile"
-              alt="Lokesh profile"
+              alt="Lokesh Ram Chand B profile"
               class="size-full scale-90 rounded-lg object-cover object-top brightness-110 grayscale"
             />
           </div>
@@ -85,7 +84,7 @@
               <p
                 class="3xl:text-base block leading-snug font-medium -tracking-tight uppercase"
               >
-                Available for freelance work
+                Available for engineering roles
               </p>
               <h3
                 class="3xl:heading-1 heading-1-alt font-fancy block leading-none font-bold -tracking-tight"

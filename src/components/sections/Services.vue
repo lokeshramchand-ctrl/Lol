@@ -19,7 +19,7 @@
         <p
           class="heading-4 font-fancy col-span-8 w-full text-balance sm:font-semibold md:col-span-5"
         >
-          Pixel-perfect interfaces and robust architectures don't happen by chance; they are built with intention. I bridge the gap between high-fidelity design and seamless full-stack performance to make the user journey effortless.
+          Intelligent platforms and robust architectures don't happen by chance; they are built with intention. I bridge the gap between advanced AI integrations and seamless full-stack performance to build comprehensive, data-driven solutions[cite: 1].
         </p>
       </div>
     </div>
@@ -52,21 +52,21 @@
 
   const servicesCardProps = [
     {
-      title: 'Full-Stack Web Dev',
-      body: 'I build custom, responsive web applications rooted in clean architecture. From translating pixel-perfect Figma blueprints into dynamic interfaces to managing local Node.js server environments, I ensure every project is scalable and highly maintainable.',
-      headings: ['Clean Architecture', 'Pixel-Perfect UI/UX', 'Responsive Design'],
+      title: 'AI & Machine Learning',
+      body: 'I architect intelligent systems utilizing NLP, Retrieval-Augmented Generation (RAG), and embedding models[cite: 1]. From vector search implementations to deploying self-hosted LLMs like Ollama, I build advanced data processing workflows[cite: 1].',
+      headings: ['NLP & RAG', 'Vector Search', 'Self-Hosted LLMs'],
       shape: `<svg viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
   <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z"/>
   </svg>
   `,
     },
     {
-      title: 'Event-Driven RAG & LLMs',
-      body: 'I engineer production-grade MLOps pipelines and "Enterprise Twin" architectures. By leveraging event-driven webhooks and advanced RAG, I build AI systems designed to eliminate knowledge staleness and significantly reduce hallucination rates.',
+      title: 'Full-Stack Engineering',
+      body: 'I build scalable, responsive applications utilizing React, Next.js, and Flutter[cite: 1]. I focus on clean component architecture, optimal state management, and the seamless integration of complex backend services[cite: 1].',
       headings: [
-        'LLM Twin Architectures',
-        'Event-Driven RAG',
-        'FTI Pipelines',
+        'React & Next.js',
+        'Flutter Development',
+        'Component Architecture',
       ],
       shape: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <path d="M127.14 200C99.9942 200 99.9943 167.423 72.8487 167.423C41.6048 167.423 0 158.386 0 127.133C0 99.9885 32.5678 99.9885 32.5678 72.8445C32.5678 41.6139 41.6048 0 72.8602 0C100.006 0 100.006 32.5774 127.151 32.5774C158.384 32.5774 200 41.6139 200 72.8675C200 100.012 167.421 100.012 167.421 127.156C167.409 158.444 158.384 200 127.14 200Z" />
@@ -74,12 +74,12 @@
   `,
     },
     {
-      title: 'Infrastructure & Evaluation',
-      body: 'Reliability requires rigorous testing and solid infrastructure. I manage remote development toolkits via secure server environments and design comprehensive evaluation datasets to measure AI adaptation to knowledge-base drift over time.',
+      title: 'Backend & Infrastructure',
+      body: 'I develop distributed microservices and asynchronous workflows using Node.js, Spring Boot, and RabbitMQ[cite: 1]. My expertise extends to managing PostgreSQL, ChromaDB, and building robust geospatial analytics pipelines[cite: 1].',
       headings: [
-        'Remote Server Environments',
-        'Knowledge-Base Drift',
-        'System Evaluation',
+        'Microservices',
+        'Database Management',
+        'Geospatial Analytics',
       ],
       shape: `<svg  viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
   <path d="M100 0L170.711 29.2893L200 100L170.711 170.711L100 200L29.2893 170.711L0 100L29.2893 29.2893L100 0Z" />
