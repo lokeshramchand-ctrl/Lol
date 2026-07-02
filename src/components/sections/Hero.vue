@@ -38,7 +38,7 @@
             </div>
 
             <p class="sr-only">
-              A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions for complex challenges.
+              A dedicated software engineer building scalable platforms. I combine modern full-stack development with machine learning technologies to architect solutions for complex challenges.
             </p>
             <p
               v-html="whoAmI"

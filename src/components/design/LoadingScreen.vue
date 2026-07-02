@@ -30,7 +30,7 @@
           <span
             class="loading-text inline-block translate-y-full opacity-70 will-change-auto"
           >
-            &copy; Folio {{ new Date().getFullYear() }}
+            &copy; LoFolio {{ new Date().getFullYear() }}
           </span>
         </p>
 

@@ -29,7 +29,7 @@
     <div class="grid w-full grid-cols-12">
       <div class="col-span-7 place-content-center md:col-span-6">
         <h6 class="heading-4 sm:heading-2 leading-none font-bold">
-          © {{ new Date().getFullYear() }} Huy <br />
+          © {{ new Date().getFullYear() }} Lokesh Ram Chand <br />
           All rights reserved.
         </h6>
       </div>
@@ -103,9 +103,9 @@
   const userLocalTime = ref('');
 
   onMounted(() => {
-    myLocalTime.value = moment.tz('Asia/Aden').format('h:mm:ss a');
+    myLocalTime.value = moment.tz('Asia/Kolkata').format('h:mm:ss a');
     setInterval(() => {
-      myLocalTime.value = moment.tz('Asia/Aden').format('h:mm:ss a');
+      myLocalTime.value = moment.tz('Asia/Kolkata').format('h:mm:ss a');
     }, 1000);
 
     const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;

@@ -261,7 +261,7 @@
   const people = [
     {
       quote:
-        'Lokesh was competent, open to direction, and gave expert advice throughout the redesign process. His positive attitude and humility make him a true joy to collaborate with. ',
+      'Lokesh was competent, open to direction, and gave expert advice throughout the redesign process. His positive attitude and humility make him a true joy to collaborate with. ',
       author: 'Danielle Lindamood',
       position: 'Director at Wellington Water Watchers',
      
