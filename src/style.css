@@ -16,22 +16,20 @@ layer(base);
   --font-title: 'title';
   --font-body: 'body';
 
-  /* 
-    Colors: "Midnight Slate" 
-    Variables kept as 'flax-smoke' to prevent breaking existing Vue components, 
-    but the hex values are now a premium, modern tech palette.
+  /* Colors: "Greyscale & Obsidian" (Pure Monochrome)
+    Variables kept as 'flax-smoke' to prevent breaking Vue components.
   */
-  --color-flax-smoke-50: #f8fafc;  /* Platinum White */
-  --color-flax-smoke-100: #f1f5f9; /* Off-White */
-  --color-flax-smoke-200: #e2e8f0; /* Light Silver */
-  --color-flax-smoke-300: #cbd5e1; /* Silver (Great for text on dark backgrounds) */
-  --color-flax-smoke-400: #94a3b8; /* Cool Grey */
-  --color-flax-smoke-500: #64748b; /* Slate (Great for subtle borders) */
-  --color-flax-smoke-600: #475569; /* Deep Slate */
-  --color-flax-smoke-700: #334155; /* Charcoal */
-  --color-flax-smoke-800: #1e293b; /* Dark Navy (Great for text on light backgrounds) */
-  --color-flax-smoke-900: #0f172a; /* Midnight */
-  --color-flax-smoke-950: #020617; /* Deep Obsidian */
+  --color-flax-smoke-50: #ffffff;  /* Pure White */
+  --color-flax-smoke-100: #f5f5f5; /* Off-White / Lightest Gray */
+  --color-flax-smoke-200: #e5e5e5; /* Light Gray */
+  --color-flax-smoke-300: #d4d4d4; /* Silver Gray */
+  --color-flax-smoke-400: #a3a3a3; /* Medium Gray (Great for muted text) */
+  --color-flax-smoke-500: #737373; /* Neutral Gray (Borders / Accents) */
+  --color-flax-smoke-600: #525252; /* Dim Gray */
+  --color-flax-smoke-700: #404040; /* Dark Gray */
+  --color-flax-smoke-800: #262626; /* Charcoal (Great for primary text on light) */
+  --color-flax-smoke-900: #171717; /* Off-Black */
+  --color-flax-smoke-950: #000000; /* Pure Black */
 
   /* Screens */
   --breakpoint-2xs: 420px;

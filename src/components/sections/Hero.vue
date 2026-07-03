@@ -1,103 +1,76 @@
 <template>
-  <section class="padding-x mb-[-100svh] py-0">
+  <section class="padding-x mb-[-100svh] py-0 relative">
     <div
       id="hero"
-      class="sticky top-0 flex min-h-svh w-full items-end pb-[clamp(2.25rem,2.1786rem_+_0.3571vi,2.5rem)]"
+      class="sticky top-0 flex min-h-svh w-full flex-col justify-center pt-[15vh] pb-[10vh]"
     >
-      <div class="relative flex w-full flex-col items-center">
-        <div class="w-full items-end overflow-clip">
-          <div class="flex w-full items-start gap-10">
-            <MyName />
-            <Star id="star" class="hide-on-mobile translate-x-full" />
-          </div>
+      <div class="grid w-full grid-cols-12 gap-10 items-end z-10">
+        
+        <div class="col-span-full lg:col-span-7 flex flex-col items-start">
+          <Star id="star" class="size-12 sm:size-16 mb-8 text-flax-smoke-500 will-change-transform" />
+          
+          <h1 class="heading-display font-fancy font-bold leading-[0.85] tracking-tighter text-flax-smoke-900 uppercase">
+            <span class="block">Engineering</span>
+            <span class="block text-flax-smoke-400">Enterprise AI.</span>
+          </h1>
         </div>
 
-        <!-- Typography-driven layout system (Image removed) -->
-        <div class="lg:column-gap spacing-t grid w-full grid-cols-12 items-end">
+        <div class="col-span-full lg:col-span-5 flex flex-col items-start lg:pl-4 xl:pl-10 pb-2">
           
-          <!-- Left Column: Intro & Contact -->
-          <div
-            class="col-span-full flex flex-col items-start gap-14 sm:col-span-8 md:col-span-7"
-          >
-            <div class="overflow-hidden">
-              <svg
-                id="down-arrow"
-                stroke="currentColor"
-                fill="none"
-                stroke-width="1.25"
-                viewBox="6 6 12 12"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="hide-on-mobile m-0 size-4 -translate-x-full p-0 md:size-6"
-                color="#8C8C73"
-                style="color: #8c8c73"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line x1="7" y1="7" x2="17" y2="17"></line>
-                <polyline points="17 7 17 17 7 17"></polyline>
-              </svg>
-            </div>
-
-            <p class="sr-only">
-              A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions for complex challenges.
-            </p>
-            
-            <!-- Expanded max-width for better balance across the grid -->
+          <div class="overflow-hidden mb-10">
             <p
               v-html="whoAmI"
               id="whoAmI"
-              class="who-am-i heading-5 w-full max-w-[45ch] overflow-clip leading-snug font-medium text-balance lg:text-start"
+              class="who-am-i heading-5 w-full max-w-[45ch] text-balance font-medium leading-snug text-flax-smoke-700"
             ></p>
-
-            <div class="relative origin-left overflow-hidden sm:scale-150">
-              <div id="contact-btn" class="flex -translate-y-full">
-                <Button label="Get in touch" url="https://wa.me/919121661507" />
-              </div>
-            </div>
           </div>
 
-          <!-- Right Column: Availability Status -->
-          <div
-            class="relative col-span-full mt-16 size-full overflow-clip text-start sm:col-span-4 sm:mt-0 sm:text-end md:col-span-5"
-          >
-            <div
-              id="available-for-work"
-              class="flex h-full flex-col items-start justify-end sm:items-end"
-            >
-              <p
-                class="3xl:text-base block leading-snug font-medium uppercase tracking-widest text-flax-smoke-500"
-              >
-                Available for engineering roles
-              </p>
-              <h3
-                class="3xl:heading-1 heading-1-alt font-fancy block leading-none font-bold -tracking-tight"
-              >
-                {{ AvailableForWorkDate }}
-              </h3>
+          <div class="relative origin-left overflow-hidden sm:scale-110">
+            <div id="contact-btn" class="flex -translate-y-full will-change-transform">
+              <Button label="Get in touch" url="https://wa.me/919121661507" />
             </div>
           </div>
         </div>
       </div>
+
+      <div class="absolute bottom-8 left-[3%] overflow-hidden flex items-center gap-4">
+        <svg
+          id="down-arrow"
+          stroke="currentColor"
+          fill="none"
+          stroke-width="1.5"
+          viewBox="6 6 12 12"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="m-0 size-6 -translate-y-full p-0 text-flax-smoke-500 will-change-transform"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line x1="12" y1="6" x2="12" y2="18"></line>
+          <polyline points="7 13 12 18 17 13"></polyline>
+        </svg>
+        <span class="font-fancy font-bold uppercase tracking-widest text-xs text-flax-smoke-400">
+          Scroll to explore
+        </span>
+      </div>
     </div>
+    
     <div class="h-svh"></div>
   </section>
 </template>
 
 <script setup lang="ts">
   import { onBeforeMount, ref } from 'vue';
-  import { MyName, Star } from '../design';
+  import { Star } from '../design';
   import { Button } from '@/components/common';
-  import { getAvailableForWorkDate, textSplitterIntoChar } from '@/functions';
+  import { textSplitterIntoChar } from '@/functions';
 
   const whoAmI = ref(
-    'A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions for complex challenges.',
+    'I specialize in clean full-stack web architectures and production-grade MLOps. Currently focused on designing event-driven RAG systems and end-to-end Enterprise Twin architectures.'
   );
-  const AvailableForWorkDate = ref('');
 
   onBeforeMount(() => {
     whoAmI.value = textSplitterIntoChar(whoAmI.value);
-    AvailableForWorkDate.value = getAvailableForWorkDate();
   });
 </script>

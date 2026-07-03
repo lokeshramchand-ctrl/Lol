@@ -19,7 +19,7 @@
         <p
           class="heading-4 text-flax-smoke-300 max-w-[30ch] text-center font-mono"
         >
-          Your design is a masterpiece waiting to become alive.
+          Complex challenges require intelligent, scalable architectures.
         </p>
         <h3
           id="make-it-happen"
@@ -35,7 +35,7 @@
             :data-cal-config="dataCalConfig"
             label="Get in touch"
           /> -->
-          <Button label="Get in touch" url="https://wa.me/967775367671" />
+          <Button label="Get in touch" url="https://wa.me/919121661507" />
         </div>
       </div>
       <div
@@ -56,10 +56,10 @@
             <p
               class="border-flax-smoke-300 flex size-full items-center justify-start border-b pr-2 pl-1 font-bold"
             >
-              Working Globally
+              Engineering Globally
             </p>
             <p class="flex size-full items-center justify-start pr-2 pl-1">
-              Available Sep '24
+              {{ AvailableForWorkDate }}
             </p>
           </div>
         </div>
@@ -68,9 +68,9 @@
           <p class="w-full font-bold uppercase">For further inquiries</p>
           <Link
             class="text-flax-smoke-300 h-6 text-right font-medium tracking-wider lowercase"
-            label="lokeshramchand@gmail"
+            label="lokeshramchand@gmail.com"
             :icon="true"
-            url="mailto:lokeshramchand@gmail"
+            url="mailto:lokeshramchand@gmail.com"
           />
         </div>
       </div>
@@ -85,14 +85,18 @@
   import Link from '../Link.vue';
   import { contact } from '@/assets/videos';
   import { onBeforeMount, onMounted, ref } from 'vue';
-  import { textSplitterIntoChar } from '@/functions';
+  import { getAvailableForWorkDate, textSplitterIntoChar } from '@/functions';
   import { animateSplitText } from '@/animations';
   // import { dataCalConfig, dataCalLink, dataCalNamespace } from '@/data';
 
-  const makeItHappen = ref("Let's Make it happen");
+  const makeItHappen = ref("Let's engineer it");
+  const AvailableForWorkDate = ref('');
+
   onBeforeMount(() => {
     makeItHappen.value = textSplitterIntoChar(makeItHappen.value);
+    AvailableForWorkDate.value = getAvailableForWorkDate();
   });
+
   onMounted(() => {
     animateSplitText(
       '#make-it-happen .letters',

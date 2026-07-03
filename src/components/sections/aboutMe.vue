@@ -82,7 +82,7 @@
 
   onBeforeMount(() => {
     aboutMe.value = textSplitterIntoChar(
-      'Software Engineer, Full-Stack, AI/',
+      'Software Engineer',
       true,
       true,
     );

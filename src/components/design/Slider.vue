@@ -43,7 +43,9 @@
           <div
             class="lg:absolute lg:inset-0 lg:-bottom-10 lg:w-full lg:will-change-scroll"
           >
+            <!-- FIX 1: Hides Prev/Next if there is only 1 testimonial -->
             <div
+              v-if="people.length > 1"
               class="sticky top-[90%] flex place-content-end gap-3 lg:will-change-scroll"
             >
               <Button label="Prev" @click="clickPrev" />
@@ -55,18 +57,16 @@
       <div
         class="columns-gap relative order-first col-span-full flex h-[60vh] w-full items-start justify-center overflow-clip max-sm:order-last lg:order-last lg:col-span-6 lg:h-full"
       >
+        <!-- FIX 2: Dynamic loop prevents 'undefined' crashes when images are missing -->
         <img
-          :class="{ hidden: index !== 0 }"
+          v-for="(person, i) in people"
+          :key="i"
+          :class="{ hidden: index !== i }"
           class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
-          :src="people[0].profile"
+          :src="person.profile"
           alt=""
         />
-        <img
-          :class="{ hidden: index !== 1 }"
-          class="relative z-10 size-full rounded-lg object-cover object-center mix-blend-screen brightness-90 grayscale lg:h-[85svh]"
-          :src="people[1].profile"
-          alt=""
-        />
+        
         <div
           id="quote-overlay"
           class="bg-flax-smoke-500 absolute inset-0 z-50 rounded-lg"
@@ -110,10 +110,10 @@
                 >
                   <p
                     class="border-flax-smoke-500 text-flax-smoke-600 rounded-full border px-3 text-nowrap uppercase"
-                    v-for="i in p.tags"
-                    :key="i"
+                    v-for="tag in p.tags"
+                    :key="tag"
                   >
-                    {{ i }}
+                    {{ tag }}
                   </p>
                 </div>
               </div>
@@ -187,7 +187,6 @@
     newIndex: number,
     onCompleteFunc?: () => void,
   ) => {
-    // const translateY = direction === 'up' ? '100%' : '-100%';
     gsap.to('#quote-overlay', {
       translateY: '0%',
       duration: 0.7,
@@ -202,7 +201,6 @@
           ease: 'power4.inOut',
           onComplete: () => {
             gsap.set('#quote-overlay', { translateY: '100%' });
-
             canClick.value = true;
           },
         });
@@ -258,17 +256,16 @@
 
   // data
   const index = ref(0);
+  
+  // FIX 3: Removed the empty `{}` object that was causing rendering errors
   const people = [
     {
       quote:
-      'Lokesh was competent, open to direction, and gave expert advice throughout the redesign process. His positive attitude and humility make him a true joy to collaborate with. ',
+        'Lokesh was competent, open to direction, and gave expert advice throughout the redesign process. His positive attitude and humility make him a true joy to collaborate with. ',
       author: 'Danielle Lindamood',
       position: 'Director at Wellington Water Watchers',
-     
+      tags: ['Leadership', 'Collaboration'],
       profile: mohammad,
-    },
-    {
-
-    },
+    }
   ];
 </script>
