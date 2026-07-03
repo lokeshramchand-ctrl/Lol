@@ -159,33 +159,7 @@
       url: 'https://github.com/lokeshramchand-ctrl',
       year: '2024',
     },
-    {
-      name: 'SPL Systems',
-      category: 'Infrastructure & AI Portal',
-      tags: ['Linux', 'Ollama', 'WebUI'],
-      videoSrc: work3,
-      imageBg: workBg3,
-      url: 'https://splsystems.in',
-      year: '2024',
-    },
-    {
-      name: 'Water Watchers',
-      category: 'Frontend Engineering',
-      tags: ['UI/UX', 'Performance', 'CMS'],
-      videoSrc: work4,
-      imageBg: workBg4,
-      url: '#',
-      year: '2024',
-    },
-    {
-      name: 'Enterprise Twin',
-      category: 'Event-Driven Architecture',
-      tags: ['MLOps', 'RAG', 'Node.js'],
-      videoSrc: work5,
-      imageBg: workBg5,
-      url: '#',
-      year: '2026',
-    },
+    
   ];
 
   // Reusable function to handle forward scroll animation

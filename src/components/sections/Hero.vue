@@ -12,9 +12,12 @@
           </div>
         </div>
 
-        <div class="lg:column-gap spacing-t grid w-full grid-cols-12">
+        <!-- Typography-driven layout system (Image removed) -->
+        <div class="lg:column-gap spacing-t grid w-full grid-cols-12 items-end">
+          
+          <!-- Left Column: Intro & Contact -->
           <div
-            class="col-span-full flex flex-col items-start gap-14 sm:col-span-4"
+            class="col-span-full flex flex-col items-start gap-14 sm:col-span-8 md:col-span-7"
           >
             <div class="overflow-hidden">
               <svg
@@ -38,51 +41,33 @@
             </div>
 
             <p class="sr-only">
-              A dedicated software engineer building scalable platforms. I combine modern full-stack development with machine learning technologies to architect solutions for complex challenges.
+              A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions for complex challenges.
             </p>
+            
+            <!-- Expanded max-width for better balance across the grid -->
             <p
               v-html="whoAmI"
               id="whoAmI"
-              class="who-am-i heading-5 w-full max-w-[30ch] overflow-clip leading-snug font-medium text-balance sm:max-w-[37ch] lg:text-start"
+              class="who-am-i heading-5 w-full max-w-[45ch] overflow-clip leading-snug font-medium text-balance lg:text-start"
             ></p>
 
             <div class="relative origin-left overflow-hidden sm:scale-150">
               <div id="contact-btn" class="flex -translate-y-full">
-                <!-- <Button
-                  :data-cal-namespace="dataCalNamespace"
-                  :data-cal-link="dataCalLink"
-                  :data-cal-config="dataCalConfig"
-                  class="contact"
-                  label="Get in touch"
-                /> -->
                 <Button label="Get in touch" url="https://wa.me/919121661507" />
               </div>
             </div>
           </div>
 
+          <!-- Right Column: Availability Status -->
           <div
-            id="profile-container"
-            class="relative col-span-4 mt-10 h-[20vh] max-w-lg flex-col rounded-lg select-none sm:mt-0 sm:h-full md:flex md:h-[50vh]"
-          >
-            <div class="overlay bg-flax-smoke-50 absolute inset-0 z-2"></div>
-            <img
-              id="profile-img"
-              :src="profile"
-              alt="Lokesh Ram Chand B profile"
-              class="size-full scale-90 rounded-lg object-cover object-top brightness-110 grayscale"
-            />
-          </div>
-
-          <!-- content-end justify-self-end  -->
-          <div
-            class="relative col-span-8 size-full overflow-clip text-end sm:col-span-4"
+            class="relative col-span-full mt-16 size-full overflow-clip text-start sm:col-span-4 sm:mt-0 sm:text-end md:col-span-5"
           >
             <div
               id="available-for-work"
-              class="absolute right-0 bottom-0 flex translate-y-full flex-col items-end"
+              class="flex h-full flex-col items-start justify-end sm:items-end"
             >
               <p
-                class="3xl:text-base block leading-snug font-medium -tracking-tight uppercase"
+                class="3xl:text-base block leading-snug font-medium uppercase tracking-widest text-flax-smoke-500"
               >
                 Available for engineering roles
               </p>
@@ -104,9 +89,7 @@
   import { onBeforeMount, ref } from 'vue';
   import { MyName, Star } from '../design';
   import { Button } from '@/components/common';
-  import { profile } from '@/assets/images';
   import { getAvailableForWorkDate, textSplitterIntoChar } from '@/functions';
-  // import { dataCalConfig, dataCalLink, dataCalNamespace } from '@/data';
 
   const whoAmI = ref(
     'A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions for complex challenges.',

@@ -53,7 +53,7 @@ const socialLinks = [
 const resourceLinks = [
   {
     label: 'Resume',
-    url: '/LokeshRamChand_Resume.pdf',
+    url: 'https://drive.google.com/file/d/15BAHC6uRy7Imrvao6KP8DnYnx-aBJfHL/view?usp=sharing',
   },
   {
     label: 'GitHub',
