@@ -2,37 +2,43 @@
   <section class="padding-x mb-[-100svh] py-0 relative">
     <div
       id="hero"
-      class="sticky top-0 flex min-h-svh w-full flex-col justify-center pt-[15vh] pb-[10vh]"
+      class="sticky top-0 flex min-h-svh w-full flex-col justify-center pt-[15vh] pb-[5vh]"
     >
-      <div class="grid w-full grid-cols-12 gap-10 items-end z-10">
-        
-        <div class="col-span-full lg:col-span-7 flex flex-col items-start">
-          <Star id="star" class="size-12 sm:size-16 mb-8 text-flax-smoke-500 will-change-transform" />
-          
-          <h1 class="heading-display font-fancy font-bold leading-[0.85] tracking-tighter text-flax-smoke-900 uppercase">
-            <span class="block">Engineering</span>
-            <span class="block text-flax-smoke-400">Enterprise AI.</span>
-          </h1>
-        </div>
-
-        <div class="col-span-full lg:col-span-5 flex flex-col items-start lg:pl-4 xl:pl-10 pb-2">
-          
-          <div class="overflow-hidden mb-10">
-            <p
-              v-html="whoAmI"
-              id="whoAmI"
-              class="who-am-i heading-5 w-full max-w-[45ch] text-balance font-medium leading-snug text-flax-smoke-700"
-            ></p>
-          </div>
-
-          <div class="relative origin-left overflow-hidden sm:scale-110">
-            <div id="contact-btn" class="flex -translate-y-full will-change-transform">
-              <Button label="Get in touch" url="https://wa.me/919121661507" />
-            </div>
-          </div>
-        </div>
+      <!-- TOP: Massive Headline -->
+      <div class="w-full z-10 flex flex-col">
+        <h1 class="heading-display font-fancy font-bold leading-[0.85] tracking-tighter text-flax-smoke-900 uppercase">
+          <span class="block">Engineering</span>
+          <span class="block text-flax-smoke-400">Enterprise AI.</span>
+        </h1>
       </div>
 
+      <!-- BOTTOM: Architectural Divider & Content Grid -->
+      <div class="w-full z-10 mt-12 sm:mt-20 lg:mt-24 border-t-2 border-flax-smoke-200 pt-8 sm:pt-12 grid grid-cols-12 gap-y-10 sm:gap-6 items-start">
+        
+        <!-- Column 1: The Star Anchor -->
+        <div class="col-span-full sm:col-span-2 flex justify-start">
+          <Star id="star" class="size-12 sm:size-16 text-flax-smoke-500 will-change-transform" />
+        </div>
+
+        <!-- Column 2: Biography -->
+        <div class="col-span-full sm:col-span-6 lg:col-span-7 flex flex-col overflow-hidden">
+          <p
+            v-html="whoAmI"
+            id="whoAmI"
+            class="who-am-i heading-5 w-full max-w-[50ch] text-balance font-medium leading-snug text-flax-smoke-700"
+          ></p>
+        </div>
+
+        <!-- Column 3: Contact Button -->
+        <div class="col-span-full sm:col-span-4 lg:col-span-3 flex sm:justify-end origin-left sm:origin-right overflow-hidden relative">
+          <div id="contact-btn" class="flex -translate-y-full will-change-transform scale-110 sm:scale-100">
+            <Button label="Get in touch" url="https://wa.me/919121661507" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator (Bottom Left) -->
       <div class="absolute bottom-8 left-[3%] overflow-hidden flex items-center gap-4">
         <svg
           id="down-arrow"
