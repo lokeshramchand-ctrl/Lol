@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description><dc:creator>RealFaviconGenerator</dc:creator><dc:source>https://realfavicongenerator.net</dc:source></rdf:Description></rdf:RDF></metadata><style>
+    :root {
+      --bg: #000;
+      --fg: #fff;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #fff;
+        --fg: #000;
+      }
+    }
+  </style><rect width="64" height="64" rx="14" fill="var(--bg)"></rect><g fill="var(--fg)">
+    <circle cx="18" cy="18" r="3"></circle>
+    <circle cx="32" cy="18" r="3"></circle>
+    <circle cx="46" cy="18" r="3"></circle>
+
+    <circle cx="18" cy="32" r="3"></circle>
+    <circle cx="32" cy="32" r="3"></circle>
+    <circle cx="46" cy="32" r="3"></circle>
+
+    <circle cx="18" cy="46" r="3"></circle>
+    <circle cx="32" cy="46" r="3"></circle>
+    <circle cx="46" cy="46" r="3"></circle>
+  </g></svg>
