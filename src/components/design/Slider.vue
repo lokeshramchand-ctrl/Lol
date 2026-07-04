@@ -126,7 +126,7 @@
 </template>
 
 <script setup lang="ts">
-  import { esmail, mohammad } from '@/assets/images';
+  import { esmail, danielle } from '@/assets/images';
   import { Button } from '../common';
   import { computed, onMounted, ref } from 'vue';
   import { useWindowSize } from '@vueuse/core';
@@ -265,7 +265,7 @@
       author: 'Danielle Lindamood',
       position: 'Director at Wellington Water Watchers',
       tags: ['Leadership', 'Collaboration'],
-      profile: mohammad,
+      profile: danielle,
     }
   ];
 </script>
