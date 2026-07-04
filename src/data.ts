@@ -38,7 +38,7 @@ const navbarLinks = [
 const socialLinks = [
   {
     label: 'X',
-    url: 'https://x.com/lokeshramchand', 
+    url: 'https://x.com/LokeshRamC', 
   },
   {
     label: 'GitHub',
