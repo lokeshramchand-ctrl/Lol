@@ -44,7 +44,7 @@
         <p
           class="heading-4 relative w-full max-w-[40ch] leading-snug font-medium text-balance"
         >
-          With a passion for full-stack development and AI integration, I engineer robust platforms from the ground up. I focus on building scalable, event-driven architectures that deliver intelligent solutions and drive measurable impact.
+  I enjoy building software that solves meaningful problems. From intelligent AI-powered systems to scalable web applications, I focus on creating products that are reliable, intuitive, and designed to make complex workflows feel simple.
         </p>
 
         <div
@@ -54,8 +54,11 @@
             ( ABOUT ME )
           </p>
           <p class="heading-6 font-fancy w-full text-balance sm:max-w-[40ch]">
-            Architecting high-performance web applications and machine learning pipelines is my primary focus. I leverage technologies like React, Node.js, and self-hosted LLMs to bridge the gap between complex geospatial data and seamless frontend experiences. <br /><br />
-            When I am not immersed in deploying production-ready AI models or optimizing databases, I enjoy exploring advanced Retrieval-Augmented Generation (RAG) systems and refining my full-stack engineering toolkit.
+              I'm a software engineer passionate about turning ideas into products that people can actually use. My work spans full-stack development, backend systems, artificial intelligence, and modern web technologies, allowing me to design solutions from concept to deployment.<br /><br />
+  I enjoy working on challenging problems that involve scalability, automation, data processing, and intelligent decision-making. Whether it's building event-driven architectures, integrating machine learning into real-world applications, or developing interactive user experiences, I strive to write clean, maintainable software that creates lasting value.
+  <br /><br />
+  Beyond coding, I'm constantly exploring emerging technologies, experimenting with new frameworks, and learning how modern AI systems can enhance the way people interact with software. I believe great engineering is a balance of technical excellence, thoughtful design, and continuous curiosity.
+
           </p>
         </div>
       </div>

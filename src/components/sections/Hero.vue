@@ -1,45 +1,42 @@
 <template>
-  <section class="padding-x mb-[-100svh] py-0 relative">
+  <section class="padding-x mb-[-100svh] py-0 relative overflow-hidden">
     <div
       id="hero"
-      class="sticky top-0 flex min-h-svh w-full flex-col justify-center pt-[15vh] pb-[5vh]"
+      class="sticky top-0 flex min-h-[100svh] w-full flex-col justify-center pt-28 pb-20 sm:pt-[15vh] sm:pb-[5vh]"
     >
-      <!-- TOP: Massive Headline -->
-      <div class="w-full z-10 flex flex-col">
-        <h1 class="heading-display font-fancy font-bold leading-[0.85] tracking-tighter text-flax-smoke-900 uppercase">
-          <span class="block">Engineering</span>
-          <span class="block text-flax-smoke-400">Enterprise AI.</span>
+      <div class="w-full z-10 flex flex-col relative">
+        <h1 class="heading-display font-fancy font-bold leading-[0.9] sm:leading-[0.85] tracking-tighter text-flax-smoke-900 uppercase break-words">
+          <span class="block">Software</span>
+          
+          <span class="relative inline-block w-fit pr-10 sm:pr-14 lg:pr-20 text-flax-smoke-400">
+            Engineered Well.
+            <Star 
+              id="star" 
+              class="absolute top-0 right-0 -translate-y-[20%] sm:-translate-y-1/3 size-8 sm:size-12 lg:size-16 text-flax-smoke-500 will-change-transform" 
+            />
+          </span>
         </h1>
       </div>
 
-      <!-- BOTTOM: Architectural Divider & Content Grid -->
-      <div class="w-full z-10 mt-12 sm:mt-20 lg:mt-24 border-t-2 border-flax-smoke-200 pt-8 sm:pt-12 grid grid-cols-12 gap-y-10 sm:gap-6 items-start">
+      <div class="w-full z-10 mt-10 sm:mt-16 lg:mt-24 border-t-2 border-flax-smoke-200 pt-6 sm:pt-10 flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 lg:gap-20">
         
-        <!-- Column 1: The Star Anchor -->
-        <div class="col-span-full sm:col-span-2 flex justify-start">
-          <Star id="star" class="size-12 sm:size-16 text-flax-smoke-500 will-change-transform" />
-        </div>
-
-        <!-- Column 2: Biography -->
-        <div class="col-span-full sm:col-span-6 lg:col-span-7 flex flex-col overflow-hidden">
+        <div class="flex flex-col overflow-hidden w-full md:flex-1">
           <p
             v-html="whoAmI"
             id="whoAmI"
-            class="who-am-i heading-5 w-full max-w-[50ch] text-balance font-medium leading-snug text-flax-smoke-700"
+            class="who-am-i heading-5 w-full max-w-[100%] md:max-w-[50ch] text-balance font-medium leading-snug text-flax-smoke-700"
           ></p>
         </div>
 
-        <!-- Column 3: Contact Button -->
-        <div class="col-span-full sm:col-span-4 lg:col-span-3 flex sm:justify-end origin-left sm:origin-right overflow-hidden relative">
-          <div id="contact-btn" class="flex -translate-y-full will-change-transform scale-110 sm:scale-100">
+        <div class="relative origin-left overflow-hidden shrink-0">
+          <div id="contact-btn" class="flex -translate-y-full will-change-transform">
             <Button label="Get in touch" url="https://wa.me/919121661507" />
           </div>
         </div>
 
       </div>
 
-      <!-- Scroll Indicator (Bottom Left) -->
-      <div class="absolute bottom-8 left-[3%] overflow-hidden flex items-center gap-4">
+      <div class="absolute bottom-6 sm:bottom-8 left-[3%] overflow-hidden flex items-center gap-3 sm:gap-4">
         <svg
           id="down-arrow"
           stroke="currentColor"
@@ -48,7 +45,7 @@
           viewBox="6 6 12 12"
           stroke-linecap="round"
           stroke-linejoin="round"
-          class="m-0 size-6 -translate-y-full p-0 text-flax-smoke-500 will-change-transform"
+          class="m-0 size-5 sm:size-6 -translate-y-full p-0 text-flax-smoke-500 will-change-transform"
           height="1em"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -56,9 +53,6 @@
           <line x1="12" y1="6" x2="12" y2="18"></line>
           <polyline points="7 13 12 18 17 13"></polyline>
         </svg>
-        <span class="font-fancy font-bold uppercase tracking-widest text-xs text-flax-smoke-400">
-          Scroll to explore
-        </span>
       </div>
     </div>
     
@@ -73,7 +67,7 @@
   import { textSplitterIntoChar } from '@/functions';
 
   const whoAmI = ref(
-    'I specialize in clean full-stack web architectures and production-grade MLOps. Currently focused on designing event-driven RAG systems and end-to-end Enterprise Twin architectures.'
+    'I’m a software engineer passionate about building scalable applications, intelligent systems, and digital experiences that solve real-world problems. From full-stack development to AI-powered products, I enjoy transforming ambitious ideas into reliable, production-ready software.'
   );
 
   onBeforeMount(() => {
