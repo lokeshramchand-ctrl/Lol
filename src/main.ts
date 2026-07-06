@@ -1,3 +1,4 @@
+// src/main.ts
 import './style.css';
 // @ts-ignore: Vue SFC import - project has appropriate tooling but TS can't find the declaration here
 import App from './App.vue';
@@ -9,6 +10,7 @@ import router from './router';
 const lenis = new Lenis({
   duration: 0.8,
 });
+
 function raf(time: number) {
   lenis.raf(time);
   requestAnimationFrame(raf);

@@ -67,6 +67,23 @@ const socialLinks = [
   },
 ];
 
+export const blogPosts = [
+  {
+    title: "Architecting Enterprise AI: A Pragmatic Approach",
+    slug: "enterprise-ai", // This means the file must be public/blogs/enterprise-ai.md
+    date: "July 24, 2026",
+    excerpt: "Exploring the integration of Large Language Models into legacy enterprise systems without compromising on security or latency.",
+    tags: ["Architecture", "AI", "MLOps"],
+  },
+  {
+    title: "Why I build in Vue (and why you should too)",
+    slug: "my-first-post",
+    date: "June 12, 2026",
+    excerpt: "A deep dive into reactivity, the Composition API, and why Vue remains my framework of choice for high-fidelity web applications.",
+    tags: ["Vue", "Frontend", "Engineering"],
+  }
+];
+
 const resourceLinks = [
   {
     label: 'Resume',
