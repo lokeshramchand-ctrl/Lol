@@ -1,3 +1,20 @@
+
+export const blogPosts = [
+  {
+    title: "Architecting Enterprise AI: A Pragmatic Approach",
+    slug: "enterprise-ai", // This means the file must be public/blogs/enterprise-ai.md
+    date: "July 24, 2026",
+    excerpt: "Exploring the integration of Large Language Models into legacy enterprise systems without compromising on security or latency.",
+    tags: ["Architecture", "AI", "MLOps"],
+  },
+  {
+    title: "Why I build in Vue (and why you should too)",
+    slug: "my-first-post",
+    date: "June 12, 2026",
+    excerpt: "A deep dive into reactivity, the Composition API, and why Vue remains my framework of choice for high-fidelity web applications.",
+    tags: ["Vue", "Frontend", "Engineering"],
+  }
+];
 // Nav type
 export type navLinkType = {
   label: string;
@@ -7,34 +24,34 @@ export type navLinkType = {
 // Nav
 const navLinks = [
   {
-    label: 'Services',
-    url: '#services',
-  },
-  {
     label: 'Projects',
-    url: '#works',
+    url: '/#works', // Added slash
   },
   {
     label: 'About',
-    url: '#about-me-section',
+    url: '/#about-me-section', // Added slash
   },
   {
     label: 'Testimonials',
-    url: '#testimonials-section',
+    url: '/#testimonials-section', // Added slash
   },
   {
     label: 'Contact',
-    url: '#contact-section',
+    url: '/#contact-section', // Added slash
   },
+  {
+    label: 'Blog',
+    url: '/blog',
+  }
 ];
+
 const navbarLinks = [
   {
     label: 'Home',
-    url: '#app',
+    url: '/#app', // Added slash (or you can just use '/')
   },
   ...navLinks,
 ];
-
 const socialLinks = [
   {
     label: 'X',

@@ -1,5 +1,6 @@
 // src/main.ts
 import './style.css';
+// @ts-ignore: Vue SFC import - project has appropriate tooling but TS can't find the declaration here
 import App from './App.vue';
 import { createApp } from 'vue';
 import Lenis from 'lenis';
@@ -16,8 +17,6 @@ function raf(time: number) {
 }
 
 const app = createApp(App);
-
-// Inject the router
 app.use(router);
 app.mount('#app');
 

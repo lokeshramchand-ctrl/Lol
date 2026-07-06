@@ -1,22 +1,21 @@
-// src/router/index.ts
 import { createRouter, createWebHistory } from 'vue-router';
-import { lenis } from '@/main';
+import { HomeView , BlogPostView , BlogView } from '@/views';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/HomeView.vue'),
+    component: HomeView,
   },
   {
     path: '/blog',
     name: 'Blog',
-    component: () => import('@/views/BlogView.vue'),
+    component: BlogView,
   },
   {
     path: '/blog/:slug',
     name: 'BlogPost',
-    component: () => import('@/views/BlogPostView.vue'),
+    component: BlogPostView,
     props: true,
   },
 ];
@@ -24,13 +23,28 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-});
+  scrollBehavior(to, from, savedPosition) {
+    // 1. If there is a hash (e.g., /#works), wait 100ms for DOM to render, then scroll
+    if (to.hash) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve({
+            el: to.hash,
+            behavior: 'smooth',
+          });
+        }, 100);
+      });
+    }
+    
+    // 2. If the user clicks the browser Back/Forward buttons, remember their scroll depth
+    if (savedPosition) {
+      return savedPosition;
+    }
 
-// Force Lenis to scroll to top instantly on route changes
-router.afterEach(() => {
-  if (lenis) {
-    lenis.scrollTo(0, { immediate: true });
+    // 3. Otherwise (e.g., opening a new blog post), snap instantly to the top
+    return { top: 0 };
   }
 });
+
 
 export default router;
