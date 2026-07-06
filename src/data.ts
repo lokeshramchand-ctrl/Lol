@@ -1,9 +1,3 @@
-// Nav type
-export type navLinkType = {
-  label: string;
-  url: string;
-};
-// Add this to the bottom of your src/data.ts file
 
 export const blogPosts = [
   {
@@ -21,6 +15,12 @@ export const blogPosts = [
     tags: ["Vue", "Frontend", "Engineering"],
   }
 ];
+// Nav type
+export type navLinkType = {
+  label: string;
+  url: string;
+};
+
 // Nav
 const navLinks = [
   {
@@ -43,6 +43,10 @@ const navLinks = [
     label: 'Contact',
     url: '#contact-section',
   },
+  {
+    label: 'Blog',
+    url: '/blog',
+  }
 ];
 const navbarLinks = [
   {

@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/portfolio/',
+  base: '/',
   build: {
     sourcemap: true,
     // terserOptions:
@@ -18,7 +18,7 @@ export default defineConfig({
     robots(),
     sitemap({
       hostname: 'https://lokeshrc.me/',
-      basePath: 'portfolio',
+      basePath: '/',
       changefreq: 'hourly', // default: 'daily'
       priority: 1,
     }),

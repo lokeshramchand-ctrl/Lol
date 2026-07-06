@@ -40,7 +40,6 @@
   </div>
 
   <Cursor />
-  <Navbar @isLocked="LockeScroll" />
 
   <main class="relative min-h-full">
     <Hero />
@@ -57,7 +56,6 @@
     <Contact />
   </main>
 
-  <Footer />
 </template>
 
 <script setup lang="ts">
@@ -74,25 +72,16 @@
     LoadingScreen,
     Marquee,
     SamsungError,
-    Footer,
     Cursor,
   } from '@/components/design';
   import { useWindowSize } from '@vueuse/core';
 
-  import { Navbar } from '../components/common';  
-  import { lenis, raf } from '@/main';
+  import { raf } from '@/main';
   const { width, height } = useWindowSize();
   const noise: Ref<HTMLElement | null> = ref(null);
 
   const isSamsungBrowser = /samsung/i.test(navigator.userAgent);
 
-  const LockeScroll = (isLocked: boolean) => {
-    if (isLocked) {
-      lenis.stop();
-    } else {
-      lenis.start();
-    }
-  };
 
   watch([width, height], () => {
     if (noise.value) {
