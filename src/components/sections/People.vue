@@ -1,26 +1,15 @@
- <template>
+<template>
 
   <!-- common-padding  -->
 
-  <section
-
-    id="testimonials-section"
-
-    class="common-padding relative mx-auto min-h-svh -translate-y-0 overflow-y-clip py-0 will-change-transform"
-
-  >
+  <section id="testimonials-section"
+    class="common-padding relative mx-auto min-h-svh -translate-y-0 overflow-y-clip py-0 will-change-transform">
 
     <div
-
-      class="border-flax-smoke-300 grid w-full grid-cols-12 border-b-[1px] pb-[clamp(2.25rem,2.1786rem_+_0.3571vi,2.5rem)]"
-
-    >
+      class="border-flax-smoke-300 grid w-full grid-cols-12 border-b-[1px] pb-[clamp(2.25rem,2.1786rem_+_0.3571vi,2.5rem)]">
 
       <h3
-
-        class="heading-1 max-sm:heading-2 text-flax-smoke-950 col-span-full leading-none font-bold uppercase will-change-auto"
-
-      >
+        class="heading-1 max-sm:heading-2 text-flax-smoke-950 col-span-full leading-none font-bold uppercase will-change-auto">
 
         Don't take my <br />
 
@@ -28,11 +17,7 @@
 
       </h3>
 
-      <div
-
-        class="text-flax-smoke-800 col-span-full mt-[5%] flex justify-end gap-10 sm:gap-20 lg:col-span-10"
-
-      >
+      <div class="text-flax-smoke-800 col-span-full mt-[5%] flex justify-end gap-10 sm:gap-20 lg:col-span-10">
 
         <p class="heading-6 text-center text-nowrap uppercase">
 
@@ -42,7 +27,8 @@
 
         <p class="heading-6 font-fancy w-full text-balance sm:max-w-[40ch]">
 
-          Here is what my managers and technical leads have to say about our work together. Delivering high-quality results, integrating smoothly with the team, and exceeding project expectations are my top priorities.
+          Here is what my managers and technical leads have to say about our work together. Delivering high-quality
+          results, integrating smoothly with the team, and exceeding project expectations are my top priorities.
 
         </p>
 
@@ -60,46 +46,46 @@
 
 <script setup lang="ts">
 
-  // import gsap from 'gsap';
+// import gsap from 'gsap';
 
-  // import { ScrollTrigger } from 'gsap/all';
+// import { ScrollTrigger } from 'gsap/all';
 
-  // import { onMounted } from 'vue';
+// import { onMounted } from 'vue';
 
-  import { Slider } from '../design';
-
-
-  // gsap.registerPlugin(ScrollTrigger);
+import { Slider } from '../design';
 
 
-  // const animatePeopleSectionLeave = (id: string) => {
+// gsap.registerPlugin(ScrollTrigger);
 
-  //   gsap.to(id, {
 
-  //     scrollTrigger: {
+// const animatePeopleSectionLeave = (id: string) => {
 
-  //       trigger: id,
+//   gsap.to(id, {
 
-  //       markers: true,
+//     scrollTrigger: {
 
-  //       start: 'top 80%',
+//       trigger: id,
 
-  //       end: '100% end',
+//       markers: true,
 
-  //     },
+//       start: 'top 80%',
 
-  //     duration: 0.7,
+//       end: '100% end',
 
-  //     y: '0',
+//     },
 
-  //   });
+//     duration: 0.7,
 
-  // };
+//     y: '0',
 
-  // onMounted(() => {
+//   });
 
-  //   animatePeopleSectionLeave('#testimonials-section');
+// };
 
-  // });
+// onMounted(() => {
 
-</script> 
+//   animatePeopleSectionLeave('#testimonials-section');
+
+// });
+
+</script>
