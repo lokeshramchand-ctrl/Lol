@@ -20,6 +20,7 @@
         <feBlend mode="screen" />
       </filter>
       <rect ref="noise" class="size-full" filter="url(#noise)" opacity="0.15" />
+
       <filter id="noise">
         <feTurbulence
           type="fractalNoise"
@@ -39,37 +40,48 @@
   </div>
 
   <Cursor />
-  <Navbar @isLocked="LockeScroll" />
 
-  <router-view />
+  <main class="relative min-h-full">
+    <Hero />
+    <div
+      class="text-flax-smoke-200 relative rounded-t-3xl bg-[#0B0B0A] py-[5%]"
+    >
+      <Services />
+      <Marquee />
+      <Works />
+    </div>
 
-  <Footer />
+    <aboutMe />
+    <People />
+    <Contact />
+  </main>
+
 </template>
 
 <script setup lang="ts">
+  import {
+    Hero,
+    People,
+    Services,
+    Works,
+    aboutMe,
+    Contact,
+  } from '@/components/sections';
   import { onMounted, type Ref, ref, watch } from 'vue';
   import {
     LoadingScreen,
+    Marquee,
     SamsungError,
-    Footer,
     Cursor,
   } from '@/components/design';
-  import { Navbar } from '@/components/common';
   import { useWindowSize } from '@vueuse/core';
-  import { lenis, raf } from './main';
 
+  import { raf } from '@/main';
   const { width, height } = useWindowSize();
   const noise: Ref<HTMLElement | null> = ref(null);
 
   const isSamsungBrowser = /samsung/i.test(navigator.userAgent);
 
-  const LockeScroll = (isLocked: boolean) => {
-    if (isLocked) {
-      lenis.stop();
-    } else {
-      lenis.start();
-    }
-  };
 
   watch([width, height], () => {
     if (noise.value) {
@@ -80,6 +92,9 @@
 
   onMounted(() => {
     document.body.classList.add('stop-scrolling');
+    // TODO:
+    // window.scrollTo(0, 0);
+
     setTimeout(() => {
       requestAnimationFrame(raf);
     }, 2000);

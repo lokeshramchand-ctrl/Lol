@@ -1,7 +1,9 @@
 import './style.css';
+// @ts-ignore: Vue SFC import - project has appropriate tooling but TS can't find the declaration here
 import App from './App.vue';
 import { createApp } from 'vue';
 import Lenis from 'lenis';
+import router from './router';
 
 // smooth scroll
 const lenis = new Lenis({
@@ -13,6 +15,7 @@ function raf(time: number) {
 }
 
 const app = createApp(App);
+app.use(router);
 app.mount('#app');
 
 export { raf, lenis };

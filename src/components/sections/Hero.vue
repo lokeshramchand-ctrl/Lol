@@ -18,7 +18,7 @@
         </h1>
       </div>
 
-      <div class="w-full z-10 mt-10 sm:mt-16 lg:mt-24 border-t-2 border-flax-smoke-200 pt-6 sm:pt-10 flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 lg:gap-20">
+      <div class="w-full z-10 mt-6 sm:mt-10 lg:mt-12 border-t-2 border-flax-smoke-200 pt-4 sm:pt-6 flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 lg:gap-20">
         
         <div class="flex flex-col overflow-hidden w-full md:flex-1">
           <p

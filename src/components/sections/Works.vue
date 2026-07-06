@@ -115,8 +115,8 @@
   import { computed, onBeforeMount, onMounted, ref, useTemplateRef } from 'vue';
   import gsap from 'gsap';
   import { useWindowSize } from '@vueuse/core';
-  import { work1, work2, work3, work4, work5 } from '@/assets/videos';
-  import { workBg1, workBg2, workBg3, workBg4, workBg5 } from '@/assets/images';
+  import { work1, work2 } from '@/assets/videos';
+  import { workBg1, workBg2 } from '@/assets/images';
   const videoRefs = useTemplateRef<HTMLVideoElement[]>('videoRefs');
 
   const isSmallScreen = computed(() => {
