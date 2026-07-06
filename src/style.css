@@ -16,20 +16,18 @@ layer(base);
   --font-title: 'title';
   --font-body: 'body';
 
-  /* Colors: "Greyscale & Obsidian" (Pure Monochrome)
-    Variables kept as 'flax-smoke' to prevent breaking Vue components.
-  */
-  --color-flax-smoke-50: #ffffff;  /* Pure White */
-  --color-flax-smoke-100: #f5f5f5; /* Off-White / Lightest Gray */
-  --color-flax-smoke-200: #e5e5e5; /* Light Gray */
-  --color-flax-smoke-300: #d4d4d4; /* Silver Gray */
-  --color-flax-smoke-400: #a3a3a3; /* Medium Gray (Great for muted text) */
-  --color-flax-smoke-500: #737373; /* Neutral Gray (Borders / Accents) */
-  --color-flax-smoke-600: #525252; /* Dim Gray */
-  --color-flax-smoke-700: #404040; /* Dark Gray */
-  --color-flax-smoke-800: #262626; /* Charcoal (Great for primary text on light) */
-  --color-flax-smoke-900: #171717; /* Off-Black */
-  --color-flax-smoke-950: #000000; /* Pure Black */
+/* Colors: "Matcha & Cream" (Light Mode) */
+  --color-flax-smoke-50: #fbfefb;  /* Crisp Cream Background */
+  --color-flax-smoke-100: #f0fdf4; /* Subtle green-tinted hover */
+  --color-flax-smoke-200: #dcfce7; /* Soft borders */
+  --color-flax-smoke-300: #bbf7d0; /* Hard borders */
+  --color-flax-smoke-400: #a1a1aa; /* Muted text */
+  --color-flax-smoke-500: #10b981; /* ACCENT: Vibrant Matcha Green */
+  --color-flax-smoke-600: #059669; /* Deep Green (Hover) */
+  --color-flax-smoke-700: #3f3f46; /* Secondary text */
+  --color-flax-smoke-800: #27272a; /* Primary body text */
+  --color-flax-smoke-900: #18181b; /* Near Black headers */
+  --color-flax-smoke-950: #09090b; /* Pure Black */
 
   /* Screens */
   --breakpoint-2xs: 420px;

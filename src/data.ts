@@ -24,38 +24,34 @@ export type navLinkType = {
 // Nav
 const navLinks = [
   {
-    label: 'Services',
-    url: '#services',
-  },
-  {
     label: 'Projects',
-    url: '#works',
+    url: '/#works', // Added slash
   },
   {
     label: 'About',
-    url: '#about-me-section',
+    url: '/#about-me-section', // Added slash
   },
   {
     label: 'Testimonials',
-    url: '#testimonials-section',
+    url: '/#testimonials-section', // Added slash
   },
   {
     label: 'Contact',
-    url: '#contact-section',
+    url: '/#contact-section', // Added slash
   },
   {
     label: 'Blog',
     url: '/blog',
   }
 ];
+
 const navbarLinks = [
   {
     label: 'Home',
-    url: '#app',
+    url: '/#app', // Added slash (or you can just use '/')
   },
   ...navLinks,
 ];
-
 const socialLinks = [
   {
     label: 'X',
