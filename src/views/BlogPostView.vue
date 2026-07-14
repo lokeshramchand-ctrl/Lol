@@ -2,7 +2,7 @@
   <section class="padding-x min-h-svh pt-[15vh] pb-32">
     <div class="w-full max-w-3xl mx-auto z-10 relative">
       
-      <router-link to="/blog" class="inline-flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-widest text-flax-smoke-500 hover:text-flax-smoke-900 transition-colors mb-12">
+      <router-link to="/blog" class="post-back-btn inline-flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-widest text-flax-smoke-500 hover:text-flax-smoke-900 transition-colors mb-12">
         <span>←</span> Back to Journal
       </router-link>
 
@@ -16,15 +16,17 @@
 
       <article v-else class="will-change-transform">
         <header class="mb-16 pb-12 border-b-2 border-flax-smoke-200">
-          <p class="font-mono text-sm font-bold text-flax-smoke-500 uppercase mb-6">{{ postMeta?.date }}</p>
-          <h1 class="heading-2 font-fancy font-bold leading-[0.9] tracking-tighter uppercase text-balance mb-8 text-flax-smoke-900">
+          <p class="post-meta font-mono text-sm font-bold text-flax-smoke-500 uppercase mb-6">{{ postMeta?.date }}</p>
+          
+          <h1 class="post-title heading-2 font-fancy font-bold leading-[0.9] tracking-tighter uppercase text-balance mb-8 text-flax-smoke-900">
             {{ postMeta?.title }}
           </h1>
+          
           <div class="flex flex-wrap gap-3">
             <span 
               v-for="tag in postMeta?.tags" 
               :key="tag"
-              class="text-xs font-bold uppercase tracking-widest bg-flax-smoke-900 text-flax-smoke-50 px-4 py-2 rounded-full"
+              class="post-tag text-xs font-bold uppercase tracking-widest bg-flax-smoke-900 text-flax-smoke-50 px-4 py-2 rounded-full"
             >
               {{ tag }}
             </span>
@@ -39,10 +41,11 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, onMounted, computed } from 'vue';
+  import { ref, onMounted, computed, watch, nextTick } from 'vue';
   import { useRoute } from 'vue-router';
   import { marked } from 'marked';
   import { blogPosts } from '@/data';
+  import { animateBlogPostEnter } from '@/animations'; // Adjust path if needed
 
   const route = useRoute();
   const slug = route.params.slug as string;
@@ -55,6 +58,14 @@
     return blogPosts.find(post => post.slug === slug);
   });
 
+  // Watch for loading to finish, then animate once DOM updates
+  watch(isLoading, async (newVal) => {
+    if (!newVal && !error.value) {
+      await nextTick();
+      animateBlogPostEnter();
+    }
+  });
+
   onMounted(async () => {
     if (!postMeta.value) {
       error.value = "Error 404: Post metadata not found.";
@@ -63,7 +74,6 @@
     }
 
     try {
-      // Fetch the raw markdown file from the public/blogs/ folder
       const response = await fetch(`${import.meta.env.BASE_URL}blogs/${slug}.md`);
       
       if (!response.ok) {
