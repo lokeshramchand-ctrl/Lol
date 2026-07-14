@@ -391,34 +391,31 @@ const animateAboutMeSectionLeave = (id: string) => {
     },
   });
 };
-// Add this towards the bottom of your animations/index.ts file
-
-// ! Blog Animations
 const animateBlogListEnter = () => {
-  const tl = gsap.timeline();
+  // 1. Force GSAP and Lenis to recognize the top of the page
+  window.scrollTo(0, 0);
 
-  // Header text animation
-  tl.fromTo('.blog-header-anim',
-    { y: 50, opacity: 0 },
-    { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: 'power4.out' }
-  );
-
-  // List items staggered scroll animation
-  gsap.fromTo('.blog-item-anim',
-    { y: 50, opacity: 0 },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.blog-list-container',
-        start: 'top 85%',
-      }
+  const tl = gsap.timeline({
+    onComplete: () => {
+      // 2. Tell GSAP to recalculate the page height for Lenis
+      ScrollTrigger.refresh();
     }
+  });
+  
+  // Header text animation
+  tl.fromTo('.blog-header-anim', 
+    { y: 50, opacity: 0 }, 
+    { y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: 'power4.out' }
+  )
+  // List items staggered entrance
+  .fromTo('.blog-item-anim', 
+    { y: 50, opacity: 0 }, 
+    { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out' },
+    "-=0.5" // Start this half a second before the header finishes
   );
 };
+
+
 
 const animateBlogPostEnter = () => {
   const tl = gsap.timeline();
@@ -450,7 +447,6 @@ const animateBlogPostEnter = () => {
 };
 
 
-
 export {
   displayNone,
   xToZero,
@@ -467,4 +463,5 @@ export {
   animateAboutMeSectionLeave,
   animateBlogListEnter,
   animateBlogPostEnter,
+  
 };

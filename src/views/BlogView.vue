@@ -41,13 +41,30 @@
     </div>
   </section>
 </template>
-
 <script setup lang="ts">
-  import { onMounted } from 'vue';
+  import { onMounted, nextTick } from 'vue';
   import { blogPosts } from '@/data';
-  import { animateBlogListEnter } from '@/animations'; // Adjust path if needed
+  
+  // Make sure to import your new animation and Lenis/ScrollTrigger
+  import { animateBlogListEnter } from '@/animations'; 
+  import ScrollTrigger from 'gsap/ScrollTrigger';
+  import { lenis, raf } from '@/main';
 
-  onMounted(() => {
+  onMounted(async () => {
+    // 1. REMOVE the lock class that might be left over from HomeView
+    document.body.classList.remove('stop-scrolling');
+    
+    // 2. Ensure Lenis is actually running 
+    requestAnimationFrame(raf);
+    lenis.start();
+
+    // 3. Wait for Vue to fully render the list in the DOM
+    await nextTick();
+    
+    // 4. Force GSAP to map the new page height
+    ScrollTrigger.refresh();
+
+    // 5. Fire the dedicated entrance animation
     animateBlogListEnter();
   });
 </script>
