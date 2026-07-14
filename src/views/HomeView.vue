@@ -68,6 +68,10 @@
     Contact,
   } from '@/components/sections';
   import { onMounted, type Ref, ref, watch } from 'vue';
+  
+  // 1. Import useRoute here
+  import { useRoute } from 'vue-router'; 
+  
   import {
     LoadingScreen,
     Marquee,
@@ -75,13 +79,16 @@
     Cursor,
   } from '@/components/design';
   import { useWindowSize } from '@vueuse/core';
-
+  import { lenis } from '@/main';
   import { raf } from '@/main';
+
   const { width, height } = useWindowSize();
   const noise: Ref<HTMLElement | null> = ref(null);
 
-  const isSamsungBrowser = /samsung/i.test(navigator.userAgent);
+  // 2. Initialize the route variable
+  const route = useRoute(); 
 
+  const isSamsungBrowser = /samsung/i.test(navigator.userAgent);
 
   watch([width, height], () => {
     if (noise.value) {
@@ -98,6 +105,16 @@
     setTimeout(() => {
       requestAnimationFrame(raf);
     }, 2000);
+    
+    // 3. Add the hash routing logic here
+    if (route.hash) {
+      // We must wait for your Loading Screen animation to finish and 
+      // the 'stop-scrolling' class to be removed before telling Lenis to scroll.
+      // Based on your GSAP timelines, 3500ms should be safe. Adjust if needed.
+      setTimeout(() => {
+        lenis.scrollTo(route.hash, { duration: 2 });
+      }, 3500); 
+    }
   });
 </script>
 

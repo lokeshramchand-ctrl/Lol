@@ -20,32 +20,28 @@
     <Circles id="circles" class="absolute top-0 right-0 opacity-25" />
     <div class="flex h-full flex-col items-center justify-between">
       <div class="relative z-19 w-full">
-        <ul
-          class="heading-2 text-flax-smoke-50 mt-12 font-bold md:mt-24"
-          id="navLinks"
-        >
-          <li
-            class="overflow-y-clip"
-            v-for="l in navbarLinks"
-            :key="l.label"
-            :id="l.label"
-          >
-            <a
-              :href="l.url"
-              @click="gotoSection(l.url)"
-              class="group my-2 flex h-full w-fit translate-y-full cursor-pointer items-center justify-start leading-none will-change-auto"
-            >
-              <span
-                class="bg-flax-smoke-50 h-4 w-4 scale-0 rounded-full opacity-0 transition-all duration-300 ease-in-out group-hover:scale-100 group-hover:opacity-100"
-              ></span>
-              <p
-                class="font-fancy -translate-x-5 transition-all duration-300 ease-in-out group-hover:translate-x-5"
-              >
-                {{ l.label }}
-              </p>
-            </a>
-          </li>
-        </ul>
+       <ul
+  class="heading-2 text-flax-smoke-50 mt-12 font-bold md:mt-24"
+  id="navLinks"
+>
+  <li
+    class="overflow-y-clip"
+    v-for="l in navbarLinks"
+    :key="l.label"
+    :id="l.label"
+  >
+    <a
+      :href="l.url"
+      @click="(e) => gotoSection(e, l.url)"
+      class="group my-2 flex h-full w-fit translate-y-full cursor-pointer items-center justify-start leading-none will-change-auto"
+    >
+      <span class="bg-flax-smoke-50 h-4 w-4 scale-0 rounded-full opacity-0 transition-all duration-300 ease-in-out group-hover:scale-100 group-hover:opacity-100"></span>
+      <p class="font-fancy -translate-x-5 transition-all duration-300 ease-in-out group-hover:translate-x-5">
+        {{ l.label }}
+      </p>
+    </a>
+  </li>
+</ul>
       </div>
 
       <div class="w-full">
@@ -122,6 +118,7 @@
 </template>
 <script setup lang="ts">
   import { onMounted, ref, watch } from 'vue';
+  import { useRouter, useRoute } from 'vue-router'; // <-- Add this
 
   import { Link, BurgerMenuBtn, MagneticEffect } from '..';
   import { Circles } from '../design';
@@ -136,6 +133,10 @@
   import { lenis } from '@/main';
 
   const isNavbarOpen = ref(false);
+  
+  // <-- Initialize router and route
+  const router = useRouter();
+  const route = useRoute(); 
 
   const toggleBtnClickAnimation = () => {
     isNavbarOpen.value = !isNavbarOpen.value;
@@ -153,9 +154,25 @@
     }
   };
 
-  const gotoSection = (url: string) => {
+  // <-- Update this function
+  const gotoSection = (e: Event, url: string) => {
+    e.preventDefault(); // Prevent standard browser anchor jump
     lenis.start();
-    lenis.scrollTo(url, { duration: 3 });
+
+    // Check if the URL is an anchor link (e.g., #works, #about)
+    if (url.startsWith('#')) {
+      if (route.path !== '/') {
+        // If we are on the Blog page, route back to Home with the hash
+        router.push({ path: '/', hash: url });
+      } else {
+        // If we are already on the Home page, just let Lenis scroll smoothly
+        lenis.scrollTo(url, { duration: 3 });
+      }
+    } else {
+      // If it's a completely different page route (like '/blog')
+      router.push(url);
+    }
+
     toggleBtnClickAnimation();
   };
 
