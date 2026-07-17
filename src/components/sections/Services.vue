@@ -1,6 +1,6 @@
 <template>
   <section id="services" class="padding-x mb-20">
-    <div class="flex w-full flex-col">
+    <div class="flex w-full flex-col text-flax-smoke-800">
       <h3
         id="what-i-do"
         v-html="whatIDo"
@@ -9,10 +9,10 @@
 
       <div
         id="services-text"
-        class="grid-gap text-flax-smoke-300 mt-[5%] grid grid-cols-12 justify-end opacity-0 lg:grid"
+        class="grid-gap text-flax-smoke-800 mt-[5%] grid grid-cols-12 justify-end opacity-0 lg:grid"
       >
         <p
-          class="heading-6 text-flax-smoke-300/85 col-span-4 col-start-0 text-center text-nowrap md:col-start-4"
+          class="heading-6 text-flax-smoke-800/85 col-span-4 col-start-0 text-center text-nowrap md:col-start-4"
         >
           ( SERVICES )
         </p>
@@ -24,17 +24,18 @@
       </div>
     </div>
 
-    <div class="relative mt-12 w-full lg:mt-[10%]">
-      <div class="mt-12 flex flex-col justify-between gap-y-16">
+    <div class="relative mt-12 w-full lg:mt-[10%] text-flax-smoke-800/85">
+      <div class="mt-12 flex flex-col justify-between gap-y-16 text-flax-smoke-800/85">
         <ServicesCard
           v-for="(card, index) in servicesCardProps"
           :key="index"
           :number="index + 1"
           :title="card.title"
+          
           :body="card.body"
           :headings="card.headings"
           :shape="card.shape"
-          class="border-flax-smoke-500/50 sticky border-t bg-[#0B0B0A]"
+          class="border-flax-smoke-800 sticky border-t bg-[#0B0B0A]"
           :class="getStyle(index)"
         />
       </div>

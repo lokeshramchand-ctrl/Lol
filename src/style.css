@@ -16,18 +16,18 @@ layer(base);
   --font-title: 'title';
   --font-body: 'body';
 
-/* Colors: "Matcha & Cream" (Light Mode) */
-  --color-flax-smoke-50: #fbfefb;  /* Crisp Cream Background */
-  --color-flax-smoke-100: #f0fdf4; /* Subtle green-tinted hover */
-  --color-flax-smoke-200: #dcfce7; /* Soft borders */
-  --color-flax-smoke-300: #bbf7d0; /* Hard borders */
-  --color-flax-smoke-400: #a1a1aa; /* Muted text */
-  --color-flax-smoke-500: #10b981; /* ACCENT: Vibrant Matcha Green */
-  --color-flax-smoke-600: #059669; /* Deep Green (Hover) */
-  --color-flax-smoke-700: #3f3f46; /* Secondary text */
-  --color-flax-smoke-800: #27272a; /* Primary body text */
-  --color-flax-smoke-900: #18181b; /* Near Black headers */
-  --color-flax-smoke-950: #09090b; /* Pure Black */
+  /* Colors: "Absolute Void & Amber" (Dark Mode) */
+  --color-flax-smoke-50: #000000; /* Pure, absolute black background */
+  --color-flax-smoke-100: #0a0a0a; /* Barely elevated surface for cards/hover */
+  --color-flax-smoke-200: #171717; /* Very subtle borders */
+  --color-flax-smoke-300: #262626; /* Harder UI lines */
+  --color-flax-smoke-400: #f5f5f5; /* Muted, readable secondary text */
+  --color-flax-smoke-500: #f59e0b; /* ACCENT: Glowing Architectural Amber */
+  --color-flax-smoke-600: #d97706; /* Deep Amber for hover states */
+  --color-flax-smoke-700: #d4d4d4; /* Crisp secondary text */
+  --color-flax-smoke-800: #f5f5f5; /* Primary body text (soft white) */
+  --color-flax-smoke-900: #ffffff; /* Pure white headers (maximum contrast) */
+  --color-flax-smoke-950: #ffffff; /* Pure white */
 
   /* Screens */
   --breakpoint-2xs: 420px;
@@ -207,34 +207,34 @@ layer(base);
     @apply bg-flax-smoke-500 text-flax-smoke-100;
   }
   .markdown-content {
-  @apply font-fancy text-lg leading-relaxed text-flax-smoke-800;
-}
-.markdown-content h1, 
-.markdown-content h2 {
-  @apply font-fancy text-3xl md:text-4xl font-bold uppercase tracking-tight text-flax-smoke-900 mt-16 mb-6;
-}
-.markdown-content h3 {
-  @apply font-fancy text-2xl font-bold text-flax-smoke-800 mt-10 mb-4;
-}
-.markdown-content p {
-  @apply mb-6;
-}
-.markdown-content a {
-  @apply underline decoration-flax-smoke-400 decoration-2 underline-offset-4 hover:decoration-flax-smoke-900 hover:text-flax-smoke-950 transition-colors;
-}
-.markdown-content ul {
-  @apply list-disc list-inside mb-6 pl-4 space-y-2;
-}
-.markdown-content blockquote {
-  @apply border-l-4 border-flax-smoke-900 pl-6 my-8 italic text-xl text-flax-smoke-600;
-}
-.markdown-content code {
-  @apply font-mono text-sm bg-flax-smoke-200 text-flax-smoke-900 px-2 py-1 rounded-md;
-}
-.markdown-content pre {
-  @apply bg-[#0f172a] text-flax-smoke-50 p-6 rounded-lg my-8 overflow-x-auto;
-}
-.markdown-content pre code {
-  @apply bg-transparent text-flax-smoke-50 p-0 rounded-none;
-}
+    @apply font-fancy text-flax-smoke-800 text-lg leading-relaxed;
+  }
+  .markdown-content h1,
+  .markdown-content h2 {
+    @apply font-fancy text-flax-smoke-900 mt-16 mb-6 text-3xl font-bold tracking-tight uppercase md:text-4xl;
+  }
+  .markdown-content h3 {
+    @apply font-fancy text-flax-smoke-800 mt-10 mb-4 text-2xl font-bold;
+  }
+  .markdown-content p {
+    @apply mb-6;
+  }
+  .markdown-content a {
+    @apply decoration-flax-smoke-400 hover:decoration-flax-smoke-900 hover:text-flax-smoke-950 underline decoration-2 underline-offset-4 transition-colors;
+  }
+  .markdown-content ul {
+    @apply mb-6 list-inside list-disc space-y-2 pl-4;
+  }
+  .markdown-content blockquote {
+    @apply border-flax-smoke-900 text-flax-smoke-600 my-8 border-l-4 pl-6 text-xl italic;
+  }
+  .markdown-content code {
+    @apply bg-flax-smoke-200 text-flax-smoke-900 rounded-md px-2 py-1 font-mono text-sm;
+  }
+  .markdown-content pre {
+    @apply text-flax-smoke-50 my-8 overflow-x-auto rounded-lg bg-[#0f172a] p-6;
+  }
+  .markdown-content pre code {
+    @apply text-flax-smoke-50 rounded-none bg-transparent p-0;
+  }
 }
