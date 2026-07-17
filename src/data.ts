@@ -1,18 +1,18 @@
 
 export const blogPosts = [
   {
-    title: "Architecting Enterprise AI: A Pragmatic Approach",
-    slug: "enterprise-ai", // This means the file must be public/blogs/enterprise-ai.md
+    title: "Owning the Stack: Building My Personal Cloud",
+    slug: "self-hosting-journey", // This means the file must be public/blogs/self-hosting-journey.md
     date: "July 24, 2026",
-    excerpt: "Exploring the integration of Large Language Models into legacy enterprise systems without compromising on security or latency.",
-    tags: ["Architecture", "AI", "MLOps"],
+    excerpt: "A journey into self-hosting and the lessons learned while building a personal cloud infrastructure.",
+    tags: ["Architecture", "Self-Hosting", "Cloud"],
   },
   {
-    title: "Why I build in Vue (and why you should too)",
-    slug: "my-first-post",
+    title: "Building an Nginx Configuration I Could Actually Maintain",
+    slug: "nginx-config",
     date: "June 12, 2026",
-    excerpt: "A deep dive into reactivity, the Composition API, and why Vue remains my framework of choice for high-fidelity web applications.",
-    tags: ["Vue", "Frontend", "Engineering"],
+    excerpt: "A practical guide to creating and maintaining Nginx configurations that are both efficient and easy to manage.",
+    tags: ["DevOps", "Infrastructure", "Engineering"],
   }
 ];
 // Nav type
@@ -55,15 +55,15 @@ const navbarLinks = [
 const socialLinks = [
   {
     label: 'X',
-    url: 'https://x.com/LokeshRamC', 
+    url: 'https://x.com/LokeshRamC',
   },
   {
     label: 'GitHub',
-    url: 'https://github.com/lokeshramchand-ctrl', 
+    url: 'https://github.com/lokeshramchand-ctrl',
   },
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/lokeshramchand/', 
+    url: 'https://www.linkedin.com/in/lokeshramchand/',
   },
 ];
 
@@ -81,12 +81,12 @@ const resourceLinks = [
 const heroText =
   'A dedicated software engineer building intelligent, scalable platforms. I combine modern full-stack development with machine learning technologies to architect comprehensive, production-ready solutions.';
 
-const locationPlace = `17°22'31.0"N 78°28'27.0"E`; 
-const locationCountry = 'Hyderabad, India'; 
+const locationPlace = `17°22'31.0"N 78°28'27.0"E`;
+const locationCountry = 'Hyderabad, India';
 
 // cal.com
 const dataCalNamespace = '30min';
-const dataCalLink = 'lokeshramchand/30min'; 
+const dataCalLink = 'lokeshramchand/30min';
 const dataCalConfig =
   '{"layout":"month_view", "theme": "dark", "brand": "#8C8C73"}';
 
