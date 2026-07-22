@@ -18,29 +18,11 @@
             <p>{{ people[index].author }}</p>
             <p class="text-flax-smoke-400">{{ people[index].position }}</p>
           </div>
-          <div id="quote-tags" class="flex gap-3">
-            <p
-              class="border-flax-smoke-500 text-flax-smoke-600 rounded-full border px-3 uppercase"
-              v-for="i in people[index].tags"
-              :key="i"
-            >
-              {{ i }}
-            </p>
-          </div>
         </div>
 
         <div class="relative flex h-full items-end justify-between">
-          <div class="heading-5 flex w-2/12 items-center gap-3 overflow-clip">
-            <p
-              id="current-index"
-              class="-translate-y-full will-change-transform"
-            >
-              {{ index + 1 }}
-            </p>
-            <p class="h-0.5 w-full bg-black"></p>
-            <p>{{ people.length }}</p>
-          </div>
-          <div
+
+          <div  
             class="lg:absolute lg:inset-0 lg:-bottom-10 lg:w-full lg:will-change-scroll"
           >
             <!-- FIX 1: Hides Prev/Next if there is only 1 testimonial -->
@@ -105,17 +87,7 @@
                   </p>
                 </div>
 
-                <div
-                  class="flex max-w-60 flex-wrap gap-3 leading-[200%] uppercase"
-                >
-                  <p
-                    class="border-flax-smoke-500 text-flax-smoke-600 rounded-full border px-3 text-nowrap uppercase"
-                    v-for="tag in p.tags"
-                    :key="tag"
-                  >
-                    {{ tag }}
-                  </p>
-                </div>
+
               </div>
             </div>
           </div>

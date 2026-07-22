@@ -7,7 +7,7 @@
         class="heading-1 text-start leading-none font-bold uppercase"
       ></h3>
       <p
-        class="heading-1 text-flax-smoke-800 text-opacity-50 hidden w-4/5 text-end font-extrabold sm:block"
+        class="heading-1 text-flax-smoke-500 text-opacity-50 hidden w-4/5 text-end font-extrabold sm:block"
       >
         ( {{ selectedWorksProps.length }} )
       </p>

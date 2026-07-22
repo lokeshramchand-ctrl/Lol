@@ -19,7 +19,7 @@
 
       <div class="text-flax-smoke-800 col-span-full mt-[5%] flex justify-end gap-10 sm:gap-20 lg:col-span-10">
 
-        <p class="heading-6 text-center text-nowrap uppercase">
+        <p class="text-flax-smoke-500 heading-6 text-center text-nowrap uppercase">
 
           ( Testimonials )
 

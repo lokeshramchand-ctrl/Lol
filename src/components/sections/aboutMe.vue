@@ -50,7 +50,7 @@
         <div
           class="text-flax-smoke-800 mt-[5%] flex justify-start gap-10 sm:gap-20"
         >
-          <p class="heading-6 text-flax-smoke-800/85 text-center text-nowrap">
+          <p class="heading-6 text-flax-smoke-500/85 text-center text-nowrap">
             ( ABOUT ME )
           </p>
           <p class="heading-6 font-fancy w-full text-balance sm:max-w-[40ch]">
