@@ -1,7 +1,7 @@
 <template>
   <section
     id="about-me-section"
-    class="common-padding text-flax-smoke-200 relative z-10 overflow-y-clip rounded-b-3xl bg-[#0B0B0A] shadow-2xl will-change-auto sm:mt-0"
+    class="common-padding text-flax-smoke-800 relative z-10 overflow-y-clip rounded-b-3xl bg-[#0B0B0A] shadow-2xl will-change-auto sm:mt-0"
   >
     <div class="md:column-gap grid grid-cols-12">
       <div class="hide-on-mobile overflow-hidden md:col-span-4">
@@ -48,9 +48,9 @@
         </p>
 
         <div
-          class="text-flax-smoke-300 mt-[5%] flex justify-start gap-10 sm:gap-20"
+          class="text-flax-smoke-800 mt-[5%] flex justify-start gap-10 sm:gap-20"
         >
-          <p class="heading-6 text-flax-smoke-300/85 text-center text-nowrap">
+          <p class="heading-6 text-flax-smoke-800/85 text-center text-nowrap">
             ( ABOUT ME )
           </p>
           <p class="heading-6 font-fancy w-full text-balance sm:max-w-[40ch]">

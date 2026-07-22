@@ -17,13 +17,13 @@
       <!-- :style="'background-image: url(' + contact + ') !important; '" -->
       <div class="flex-center z-10 flex-col gap-y-10">
         <p
-          class="heading-4 text-flax-smoke-300 max-w-[30ch] text-center font-mono"
+          class="heading-4 text-flax-smoke-800 max-w-[30ch] text-center font-mono"
         >
           Complex challenges require intelligent, scalable architectures.
         </p>
         <h3
           id="make-it-happen"
-          class="heading-1 text-flax-smoke-200 max-w-[10ch] text-center leading-none"
+          class="heading-1 text-flax-smoke-800 max-w-[10ch] text-center leading-none"
           v-html="makeItHappen"
         ></h3>
         <div

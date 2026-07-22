@@ -1,23 +1,23 @@
 <template>
   <section id="works" class="common-padding mb-20">
-    <div class="flex flex-col">
+    <div class="flex flex-col text-flax-smoke-800">
       <h3
         id="selectedWorks"
         v-html="selectedWorks"
         class="heading-1 text-start leading-none font-bold uppercase"
       ></h3>
       <p
-        class="heading-1 text-flax-smoke-400 text-opacity-50 hidden w-4/5 text-end font-extrabold sm:block"
+        class="heading-1 text-flax-smoke-800 text-opacity-50 hidden w-4/5 text-end font-extrabold sm:block"
       >
         ( {{ selectedWorksProps.length }} )
       </p>
 
       <div
         id="selected-works-text"
-        class="md:column-gap text-flax-smoke-300 mt-[5%] grid grid-cols-12 justify-end opacity-0 lg:grid"
+        class="md:column-gap text-flax-smoke-800 mt-[5%] grid grid-cols-12 justify-end opacity-0 lg:grid"
       >
         <p
-          class="heading-6 text-flax-smoke-300/85 col-span-4 text-center text-nowrap lg:col-start-2"
+          class="heading-6 text-flax-smoke-800/85 col-span-4 text-center text-nowrap lg:col-start-2"
         >
           (
           <span class="inline sm:hidden">{{ selectedWorksProps.length }} </span>
@@ -35,7 +35,7 @@
       class="sm:column-gap relative mt-12 grid size-full grid-cols-12 lg:mt-[10%]"
     >
       <div
-        class="text-flax-smoke-100 sticky top-12 col-span-5 hidden h-fit w-full overflow-hidden text-[22vw] leading-[0.8] font-semibold md:flex"
+        class="text-flax-smoke-800 sticky top-12 col-span-5 hidden h-fit w-full overflow-hidden text-[22vw] leading-[0.8] font-semibold md:flex"
       >
         <span class="font-title! relative -tracking-wider">0</span>
         <span
@@ -79,11 +79,11 @@
               </div>
             </div>
             <div>
-              <p class="heading-6 font-title! mt-[2%] mb-[1%] leading-none">
+              <p class="heading-6 font-title! mt-[2%] mb-[1%] leading-none text-flax-smoke-800">
                 {{ work.category }}
               </p>
               <div class="items-center justify-between sm:flex">
-                <h3 class="heading-3 font-title! font-bold uppercase">
+                <h3 class="heading-3 font-title! font-bold uppercase text-flax-smoke-800">
                   {{ work.name }}
                 </h3>
                 <div class="flex gap-1.5 select-none">
@@ -147,7 +147,7 @@
       tags: ['Node.js', 'Python', 'RabbitMQ'],
       videoSrc: work1,
       imageBg: workBg1,
-      url: 'https://github.com/lokeshramchand-ctrl',
+      url: 'https://github.com/lokeshramchand-ctrl/Velar',
       year: '2024',
     },
     {
@@ -156,8 +156,8 @@
       tags: ['React', 'TypeScript', 'AI'],
       videoSrc: work2,
       imageBg: workBg2,
-      url: 'https://github.com/lokeshramchand-ctrl',
-      year: '2024',
+      url: 'https://github.com/lokeshramchand-ctrl/MapLayer',
+      year: '2025',
     },
     
   ];
