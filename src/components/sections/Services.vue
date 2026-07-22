@@ -12,7 +12,7 @@
         class="grid-gap text-flax-smoke-800 mt-[5%] grid grid-cols-12 justify-end opacity-0 lg:grid"
       >
         <p
-          class="heading-6 text-flax-smoke-800/85 col-span-4 col-start-0 text-center text-nowrap md:col-start-4"
+          class="heading-6 text-flax-smoke-500/85 col-span-4 col-start-0 text-center text-nowrap md:col-start-4"
         >
           ( SERVICES )
         </p>
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="relative mt-12 w-full lg:mt-[10%] text-flax-smoke-800/85">
+    <div class="relative mt-12 w-full lg:mt-[10%] text-flax-smoke-500/85">
       <div class="mt-12 flex flex-col justify-between gap-y-16 text-flax-smoke-800/85">
         <ServicesCard
           v-for="(card, index) in servicesCardProps"

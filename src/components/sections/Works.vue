@@ -7,7 +7,7 @@
         class="heading-1 text-start leading-none font-bold uppercase"
       ></h3>
       <p
-        class="heading-1 text-flax-smoke-800 text-opacity-50 hidden w-4/5 text-end font-extrabold sm:block"
+        class="heading-1 text-flax-smoke-500 text-opacity-50 hidden w-4/5 text-end font-extrabold sm:block"
       >
         ( {{ selectedWorksProps.length }} )
       </p>
@@ -17,7 +17,7 @@
         class="md:column-gap text-flax-smoke-800 mt-[5%] grid grid-cols-12 justify-end opacity-0 lg:grid"
       >
         <p
-          class="heading-6 text-flax-smoke-800/85 col-span-4 text-center text-nowrap lg:col-start-2"
+          class="heading-6 text-flax-smoke-500/85 col-span-4 text-center text-nowrap lg:col-start-2"
         >
           (
           <span class="inline sm:hidden">{{ selectedWorksProps.length }} </span>
@@ -35,7 +35,7 @@
       class="sm:column-gap relative mt-12 grid size-full grid-cols-12 lg:mt-[10%]"
     >
       <div
-        class="text-flax-smoke-800 sticky top-12 col-span-5 hidden h-fit w-full overflow-hidden text-[22vw] leading-[0.8] font-semibold md:flex"
+        class="text-flax-smoke-500 sticky top-12 col-span-5 hidden h-fit w-full overflow-hidden text-[22vw] leading-[0.8] font-semibold md:flex"
       >
         <span class="font-title! relative -tracking-wider">0</span>
         <span
