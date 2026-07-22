@@ -3,7 +3,7 @@
     <div
       class="heading-2 max-sm:heading-3 flex grid-cols-12 items-center justify-start gap-5 py-6 text-left font-semibold sm:py-5 md:grid md:justify-between"
     >
-      <span class="col-span-2 self-center text-nowrap">
+      <span class="col-span-2 self-center text-nowrap text-flax-smoke-500/85">
         ( {{ `0${number}` }} )
       </span>
       <h3 class="col-span-6 col-start-5 text-nowrap">{{ title }}</h3>
@@ -20,7 +20,7 @@
         class="heading-4 text-heading-4 col-span-7 col-start-5 flex w-full flex-col gap-y-5"
       >
         <p
-          class="text-balance text-base font-medium text-flax-smoke-300/80 sm:max-w-[40ch]"
+          class="text-balance text-base font-medium text-flax-smoke-800/80 sm:max-w-[40ch]"
         >
           {{ body }}
         </p>
